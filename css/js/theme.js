@@ -21,3 +21,22 @@ if (btnTheme) {
 
 // Aplicar al cargar
 applyThemeFromStorage();
+const btn = document.getElementById("btn-theme");
+
+// si existe, cargamos el modo guardado
+if (localStorage.getItem("tema") === "dark") {
+  document.body.classList.add("dark");
+  btn.textContent = "☀️";
+}
+
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    btn.textContent = "☀️";
+    localStorage.setItem("tema", "dark");
+  } else {
+    btn.textContent = "🌙";
+    localStorage.setItem("tema", "light");
+  }
+});
