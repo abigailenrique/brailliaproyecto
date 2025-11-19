@@ -130,3 +130,30 @@ img.foto-equipo {
 html {
   scroll-behavior: smooth;
 }
+body {
+  background: white;
+  color: black;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: #111;
+  color: white;
+}
+
+header, nav, .card, .btn {
+  transition: 0.3s;
+}
+
+body.dark header {
+  background: #222;
+}
+
+body.dark .card {
+  background: #333;
+}
+
+body.dark .btn {
+  background: #444;
+  color: white;
+}
