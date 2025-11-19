@@ -1,0 +1,132 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --accent: #40E0D0;
+  --header-bg: #000000;
+  --header-border: #ffffff;
+}
+
+.dark-mode {
+  --bg: #0d0d0d;
+  --text: #ffffff;
+  --accent: #DA70D6;
+  --header-bg: #000000;
+  --header-border: #ffffff;
+}
+
+* {
+  margin:0; padding:0; box-sizing:border-box;
+  transition: background-color .4s, color .4s;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0; left: 0;
+  background: var(--header-bg);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--header-border);
+  z-index: 1000;
+}
+
+header .logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+header nav a {
+  margin-left: 1.2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+header nav a:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+#btn-theme {
+  background: var(--accent);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--bg);
+  font-weight: bold;
+}
+
+main {
+  padding-top: 110px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 2px solid var(--accent);
+  padding: 20px;
+  border-radius: 12px;
+  width: 220px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn {
+  background: var(--accent);
+  color: var(--bg);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  margin: 20px auto;
+}
+
+section {
+  margin: 60px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+img.foto-equipo {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
